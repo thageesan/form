@@ -1,21 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Hero } from './components'
+
+import './style/main.less';
 
 
 class App extends React.Component {
 
-    state = {
-
-    };
+    state = {};
 
     render() {
-
         return (
-            <h1>
-                Welcome to {process.env.APP_NAME}!
-            </h1>
+            <>
+                <Hero />
+            </>
         )
-
     }
 
 }
