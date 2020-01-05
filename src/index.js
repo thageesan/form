@@ -12,7 +12,7 @@ class App extends React.Component {
 
         return (
             <h1>
-                Welcome to Form!
+                Welcome to {process.env.APP_NAME}!
             </h1>
         )
 

@@ -4,7 +4,8 @@
   "description": "image viewer",
   "main": "index.js",
   "scripts": {
-    "deploy": "npm run build && scp -r ./build/* $DEPLOY_USER@$DEPLOY_SERVER:$DEPLOY_UPLOAD_DIR",
+    "deploy": ". ./load_dotenv.sh",
+    "deploy:server": "scp -r ./build/* $DEPLOY_USER@$DEPLOY_SERVER:$DEPLOY_UPLOAD_DIR",
     "build": "webpack --mode production",
     "eslint-fix": "eslint --fix \"src/**/*.js\"",
     "format": "prettier --write \"src/**/*.js\"",
@@ -15,7 +16,8 @@
   "license": "UNLICENSED",
   "dependencies": {
     "react": "^16.12.0",
-    "react-dom": "^16.12.0"
+    "react-dom": "^16.12.0",
+    "react-scripts": "^3.3.0"
   },
   "devDependencies": {
     "@babel/core": "^7.7.7",
@@ -25,7 +27,7 @@
     "babel-eslint": "^10.0.3",
     "babel-loader": "^8.0.6",
     "css-loader": "^3.4.1",
-    "dotenv": "^8.2.0",
+    "dotenv-webpack": "^1.7.0",
     "eslint": "^6.8.0",
     "eslint-loader": "^3.0.3",
     "eslint-plugin-react": "^7.17.0",
