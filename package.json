@@ -4,6 +4,7 @@
   "description": "image viewer",
   "main": "index.js",
   "scripts": {
+    "deploy": "npm run build && scp -r ./build/* $DEPLOY_USER@$DEPLOY_SERVER:$DEPLOY_UPLOAD_DIR",
     "build": "webpack --mode production",
     "eslint-fix": "eslint --fix \"src/**/*.js\"",
     "format": "prettier --write \"src/**/*.js\"",
@@ -24,6 +25,7 @@
     "babel-eslint": "^10.0.3",
     "babel-loader": "^8.0.6",
     "css-loader": "^3.4.1",
+    "dotenv": "^8.2.0",
     "eslint": "^6.8.0",
     "eslint-loader": "^3.0.3",
     "eslint-plugin-react": "^7.17.0",
