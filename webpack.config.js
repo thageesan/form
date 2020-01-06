@@ -11,6 +11,9 @@ module.exports = {
     },
     devServer: {
         contentBase: './build',
+        proxy: {
+            '/api': 'http://localhost:5000'
+        }
     },
     devtool: 'inline-source-map',
     module: {
